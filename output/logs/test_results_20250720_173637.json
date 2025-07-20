@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250720_173637",
+  "results": {
+    "API接続": {
+      "success": false,
+      "error": ""
+    },
+    "RTSPストリーム": {
+      "success": false,
+      "error": null
+    },
+    "スナップショット": {
+      "success": false,
+      "error": null
+    }
+  }
+}
