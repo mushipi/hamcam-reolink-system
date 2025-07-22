@@ -1,0 +1,113 @@
+# ハムスター管理システム設定テンプレート
+# 新規セットアップ用設定ファイルテンプレート
+# 使用方法: このファイルをhamster_config.yamlとしてコピーして編集
+
+# システム情報 - 必須設定
+system:
+  version: "3.0"
+  name: "hamster_tracking_system"
+  description: "Custom hamster tracking configuration"
+
+# ケージ設定 - 必須設定
+cage:
+  dimensions:
+    width: 380.0        # 【必須】ケージ幅 (mm)
+    height: 280.0       # 【必須】ケージ奥行き (mm) 
+    depth: 200.0        # 【必須】ケージ高さ (mm)
+  
+  specifications:
+    material: "acrylic"                # ケージ材質
+    corner_markers: true               # 四隅マーカー有無
+    reference_object_size: 50.0        # 校正用物体サイズ(mm)
+    
+  environment:
+    camera_height_mm: 400.0            # カメラ設置高さ
+
+# 校正設定 - 重要設定
+coordinate_calibration:
+  method: "manual"                     # 校正方法: manual推奨
+  validation:
+    enabled: true                      # 検証有効化推奨
+    accuracy_threshold_mm: 5.0         # 許容誤差
+
+# DeepLabCut設定 - 段階的設定
+deeplabcut:
+  model:
+    confidence_threshold: 0.7          # 【要調整】信頼度閾値
+  body_parts:
+    current_phase: "phase1"            # 開始フェーズ: phase1推奨
+    
+# 移動追跡設定 - 動物種別調整
+movement_tracking:
+  constraints:
+    max_speed_mm_per_sec: 200.0        # 【要調整】最大速度
+    min_movement_threshold_mm: 2.0      # 最小移動量
+  
+  statistics:
+    activity_threshold_mm_per_min: 100.0  # 【要調整】活動判定閾値
+
+# データ保存設定 - 推奨設定
+data_collection:
+  storage:
+    base_directory: "./data"           # データ保存先
+  quality:
+    auto_quality_check: true           # 自動品質チェック
+
+# システム監視設定 - 推奨設定
+monitoring:
+  performance:
+    target_fps: 2.0                    # 目標FPS
+    memory_limit_mb: 512               # メモリ制限
+    
+  alerts:
+    no_movement_hours: 4               # 無動作アラート
+    
+  logging:
+    level: "INFO"                      # ログレベル
+
+# 照明設定 - RLC-510A対応
+lighting:
+  detection:
+    auto_detection_enabled: true       # 自動照明検出
+  scheduled_capture:
+    enabled: true                      # スケジュール撮影
+
+# ネットワーク設定 - RLC-510A設定
+network:
+  rtsp:
+    stream_type: "sub"                 # サブストリーム推奨
+    reconnect_attempts: 5
+    timeout_sec: 10
+
+# 開発設定 - 初期設定
+development:
+  debug_mode: false                    # 本番運用時はfalse
+  test_mode: false                     # テスト時のみtrue
+
+# 設定メタデータ
+metadata:
+  config_created: null                 # 作成時に自動設定
+  config_version: "1.0"
+  created_by: "User"
+  description: "Custom configuration"
+
+# ===========================================
+# 設定カスタマイズガイド
+# ===========================================
+#
+# 【必須設定項目】
+# 1. cage.dimensions - 実際のケージサイズに合わせて設定
+# 2. coordinate_calibration - 校正方法の選択
+# 3. deeplabcut.model.confidence_threshold - 環境に応じて調整
+#
+# 【推奨調整項目】  
+# 1. movement_tracking.constraints.max_speed_mm_per_sec - 動物の種類・年齢に応じて
+# 2. movement_tracking.statistics.activity_threshold_mm_per_min - 活動量判定
+# 3. monitoring.performance.target_fps - 処理能力に応じて
+#
+# 【高度な設定】
+# 1. deeplabcut.body_part_weights - 身体部位重み調整
+# 2. movement_tracking.filtering - フィルタリング細調整
+# 3. data_collection.rotation - データ保持期間
+#
+# 詳細なカスタマイズについてはドキュメントを参照してください。

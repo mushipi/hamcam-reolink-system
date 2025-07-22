@@ -1,0 +1,267 @@
+2025-07-22 21:44:10 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:44:10 - __main__ - INFO - 実行時刻: 2025-07-22 21:44:10
+2025-07-22 21:44:10 - __main__ - INFO - 引数: {'config': None, 'duration': None, 'test': False, 'manual_trigger': True, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:44:10 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:44:10 - __main__ - ERROR - システムエラー: 'HamsterTrackingConfig' object has no attribute 'data_collection'
+2025-07-22 21:44:10 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:46:30 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:46:30 - __main__ - INFO - 実行時刻: 2025-07-22 21:46:30
+2025-07-22 21:46:30 - __main__ - INFO - 引数: {'config': None, 'duration': None, 'test': False, 'manual_trigger': True, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:46:30 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:46:30 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:46:30 - __main__ - INFO - === 手動撮影テスト ===
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:46:30 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:46:30 - __main__ - ERROR - 手動撮影テストエラー: 'HamsterTrackingConfig' object has no attribute 'lighting'
+2025-07-22 21:46:30 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:46:54 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:46:54 - __main__ - INFO - 実行時刻: 2025-07-22 21:46:54
+2025-07-22 21:46:54 - __main__ - INFO - 引数: {'config': None, 'duration': None, 'test': False, 'manual_trigger': True, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:46:54 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:46:54 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:46:54 - __main__ - INFO - === 手動撮影テスト ===
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.data_quality - INFO - データ品質評価システム初期化完了
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム開始
+2025-07-22 21:46:54 - RTSPStream-sub - ERROR - RTSP接続エラー: EOF when reading a line
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - ERROR - ❌ 自動撮影システム開始エラー: RTSPストリーム開始に失敗
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム停止中...
+2025-07-22 21:46:54 - RTSPStream-sub - INFO - ストリーミング停止
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - セッションレポート保存: data/reports/session_report_20250722_214654.json
+2025-07-22 21:46:54 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム停止完了
+2025-07-22 21:46:54 - __main__ - ERROR - 手動撮影テストエラー: RTSPストリーム開始に失敗
+2025-07-22 21:46:54 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:47:10 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:47:10 - __main__ - INFO - 実行時刻: 2025-07-22 21:47:10
+2025-07-22 21:47:10 - __main__ - INFO - 引数: {'config': None, 'duration': None, 'test': False, 'manual_trigger': True, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:47:10 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:47:10 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:47:10 - __main__ - INFO - === 手動撮影テスト ===
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.data_quality - INFO - データ品質評価システム初期化完了
+2025-07-22 21:47:10 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム開始
+2025-07-22 21:47:10 - RTSPStream-sub - INFO - RTSP接続開始: rtsp://admin:894890abc@192.168.31.85:554/h264Preview_01_sub
+2025-07-22 21:47:13 - RTSPStream-sub - INFO - RTSP接続成功 - 解像度: (480, 640)
+2025-07-22 21:47:13 - RTSPStream-sub - INFO - ストリーミング開始
+2025-07-22 21:47:13 - phase3_hamster_tracking.utils.lighting_detector - INFO - LightingModeDetector 初期化完了 (閾値: 0.95)
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド開始
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 定期撮影時刻に到達
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド開始
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - DEBUG - 撮影リクエスト追加: scheduled
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム開始成功
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影実行: scheduled @ 2025-07-22 21:47:13.365412
+2025-07-22 21:47:13 - __main__ - INFO - 撮影を実行中...
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - DEBUG - 撮影リクエスト追加: manual
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - WARNING - 照明検出エラー: 'LightingModeDetector' object has no attribute 'detect_lighting_mode'
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 撮影成功: hamster_scheduled_20250722_214713_365.jpg (品質: 0.82)
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影実行: manual @ 2025-07-22 21:47:13.365846
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - WARNING - 照明検出エラー: 'LightingModeDetector' object has no attribute 'detect_lighting_mode'
+2025-07-22 21:47:13 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 撮影成功: hamster_manual_20250722_214713_365.jpg (品質: 0.82)
+2025-07-22 21:47:15 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作を検出 - 撮影をトリガー
+2025-07-22 21:47:15 - phase3_hamster_tracking.data_collection.auto_capture_system - DEBUG - 撮影リクエスト追加: motion
+2025-07-22 21:47:15 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影実行: motion @ 2025-07-22 21:47:15.352554
+2025-07-22 21:47:15 - phase3_hamster_tracking.data_collection.auto_capture_system - WARNING - 照明検出エラー: 'LightingModeDetector' object has no attribute 'detect_lighting_mode'
+2025-07-22 21:47:15 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 撮影成功: hamster_motion_20250722_214715_352.jpg (品質: 0.82)
+2025-07-22 21:47:18 - __main__ - INFO - ✅ 撮影成功: hamster_motion_20250722_214715_352.jpg
+2025-07-22 21:47:18 - __main__ - INFO - 品質スコア: 0.82
+2025-07-22 21:47:18 - __main__ - INFO - ファイルパス: data/raw_frames/hamster_motion_20250722_214715_352.jpg
+2025-07-22 21:47:18 - __main__ - INFO - 詳細品質評価: poor
+2025-07-22 21:47:18 - __main__ - INFO - 総合スコア: 0.387
+2025-07-22 21:47:18 - __main__ - INFO - ブラー: 0.985
+2025-07-22 21:47:18 - __main__ - INFO - 輝度: 0.530
+2025-07-22 21:47:18 - __main__ - INFO - ハムスター可視性: 0.100
+2025-07-22 21:47:18 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム停止中...
+2025-07-22 21:47:18 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド終了
+2025-07-22 21:47:19 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド終了
+2025-07-22 21:47:19 - RTSPStream-sub - INFO - ストリーミング停止
+2025-07-22 21:47:19 - phase3_hamster_tracking.data_collection.auto_capture_system - ERROR - セッションレポート保存エラー: Object of type datetime is not JSON serializable
+2025-07-22 21:47:19 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム停止完了
+2025-07-22 21:47:19 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:50:50 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:50:50 - __main__ - INFO - 実行時刻: 2025-07-22 21:50:50
+2025-07-22 21:50:50 - __main__ - INFO - 引数: {'config': None, 'duration': 600, 'test': True, 'manual_trigger': False, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:50:50 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:50:50 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:50:50 - __main__ - INFO - 統合撮影システム初期化完了 (テストモード)
+2025-07-22 21:50:50 - __main__ - INFO - システムコンポーネントを初期化中...
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:50:50 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:50:50 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 座標校正システム初期化完了 - ケージサイズ: 380.0x280.0mm
+2025-07-22 21:50:50 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 校正データを読み込みました: /home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/calibration_matrix.yaml (誤差: 0.00mm)
+2025-07-22 21:50:50 - __main__ - ERROR - ❌ システムコンポーネント初期化エラー: 'HamsterTrackingConfig' object has no attribute 'movement_tracking'
+2025-07-22 21:50:50 - __main__ - ERROR - システム初期化失敗
+2025-07-22 21:50:50 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:51:11 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:51:11 - __main__ - INFO - 実行時刻: 2025-07-22 21:51:11
+2025-07-22 21:51:11 - __main__ - INFO - 引数: {'config': None, 'duration': 60, 'test': True, 'manual_trigger': False, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:51:11 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:51:11 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:51:11 - __main__ - INFO - 統合撮影システム初期化完了 (テストモード)
+2025-07-22 21:51:11 - __main__ - INFO - システムコンポーネントを初期化中...
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:51:11 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 座標校正システム初期化完了 - ケージサイズ: 380.0x280.0mm
+2025-07-22 21:51:11 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 校正データを読み込みました: /home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/calibration_matrix.yaml (誤差: 0.00mm)
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.motion_detector - INFO - 動作検出システム初期化完了
+2025-07-22 21:51:11 - phase3_hamster_tracking.data_collection.data_quality - INFO - データ品質評価システム初期化完了
+2025-07-22 21:51:11 - __main__ - INFO - ✅ システムコンポーネント初期化完了
+2025-07-22 21:51:11 - __main__ - INFO - === 統合自動撮影システム開始 ===
+2025-07-22 21:51:11 - __main__ - INFO - 設定情報:
+2025-07-22 21:51:11 - __main__ - INFO -   ケージサイズ: 380.0×280.0mm
+2025-07-22 21:51:11 - __main__ - ERROR - システムエラー: 'HamsterTrackingConfig' object has no attribute 'lighting'
+2025-07-22 21:51:11 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:52:49 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:52:49 - __main__ - INFO - 実行時刻: 2025-07-22 21:52:49
+2025-07-22 21:52:49 - __main__ - INFO - 引数: {'config': None, 'duration': 60, 'test': True, 'manual_trigger': False, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:52:49 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:52:49 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:52:49 - __main__ - INFO - 統合撮影システム初期化完了 (テストモード)
+2025-07-22 21:52:49 - __main__ - INFO - システムコンポーネントを初期化中...
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:52:49 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 座標校正システム初期化完了 - ケージサイズ: 380.0x280.0mm
+2025-07-22 21:52:49 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 校正データを読み込みました: /home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/calibration_matrix.yaml (誤差: 0.00mm)
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.motion_detector - INFO - 動作検出システム初期化完了
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.data_quality - INFO - データ品質評価システム初期化完了
+2025-07-22 21:52:49 - __main__ - INFO - ✅ システムコンポーネント初期化完了
+2025-07-22 21:52:49 - __main__ - INFO - === 統合自動撮影システム開始 ===
+2025-07-22 21:52:49 - __main__ - INFO - 設定情報:
+2025-07-22 21:52:49 - __main__ - INFO -   ケージサイズ: 380.0×280.0mm
+2025-07-22 21:52:49 - __main__ - INFO -   撮影間隔: 60分
+2025-07-22 21:52:49 - __main__ - INFO -   動作検出: 有効
+2025-07-22 21:52:49 - __main__ - INFO -   品質評価: 有効
+2025-07-22 21:52:49 - __main__ - INFO -   データ保存: ./data
+2025-07-22 21:52:49 - __main__ - INFO -   実行時間: 60秒
+2025-07-22 21:52:49 - __main__ - INFO -   テストモード: 有効
+2025-07-22 21:52:49 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム開始
+2025-07-22 21:52:49 - RTSPStream-sub - INFO - RTSP接続開始: rtsp://admin:894890abc@192.168.31.85:554/h264Preview_01_sub
+2025-07-22 21:52:53 - RTSPStream-sub - INFO - RTSP接続成功 - 解像度: (480, 640)
+2025-07-22 21:52:53 - RTSPStream-sub - INFO - ストリーミング開始
+2025-07-22 21:52:53 - phase3_hamster_tracking.utils.lighting_detector - INFO - LightingModeDetector 初期化完了 (閾値: 0.95)
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド開始
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド開始
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 定期撮影時刻に到達
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム開始成功
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - DEBUG - 撮影リクエスト追加: scheduled
+2025-07-22 21:52:53 - __main__ - INFO - 実行制限時間: 60秒 (終了予定: 21:53:53)
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影実行: scheduled @ 2025-07-22 21:52:53.553007
+2025-07-22 21:52:53 - __main__ - ERROR - システム実行エラー: 'HamsterTrackingConfig' object has no attribute 'network'
+2025-07-22 21:52:53 - __main__ - INFO - 統合撮影システム停止中...
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム停止中...
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド終了
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - WARNING - 照明検出エラー: 'LightingModeDetector' object has no attribute 'detect_lighting_mode'
+2025-07-22 21:52:53 - __main__ - INFO - 撮影完了: hamster_scheduled_20250722_215253_553.jpg (品質: poor, スコア: 0.38)
+2025-07-22 21:52:53 - __main__ - WARNING - 低品質画像: hamster_scheduled_20250722_215253_553.jpg - ['ノイズが多く含まれています', 'ハムスターの可視性が低いです', '影の干渉が検出されました']
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 撮影成功: hamster_scheduled_20250722_215253_553.jpg (品質: 0.81)
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド終了
+2025-07-22 21:52:53 - RTSPStream-sub - INFO - ストリーミング停止
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - ERROR - セッションレポート保存エラー: Object of type datetime is not JSON serializable
+2025-07-22 21:52:53 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム停止完了
+2025-07-22 21:52:53 - __main__ - INFO - === 最終セッション統計 ===
+2025-07-22 21:52:53 - __main__ - INFO - 稼働時間: 0分4秒
+2025-07-22 21:52:53 - __main__ - INFO - 総撮影数: 1
+2025-07-22 21:52:53 - __main__ - INFO - 成功撮影: 1
+2025-07-22 21:52:53 - __main__ - INFO - 高品質画像: 0
+2025-07-22 21:52:53 - __main__ - INFO - 動作検出: 0回
+2025-07-22 21:52:53 - __main__ - INFO - 総データサイズ: 0.09MB
+2025-07-22 21:52:53 - __main__ - INFO - 撮影効率: 861.7枚/時間
+2025-07-22 21:52:53 - __main__ - INFO - 高品質率: 0.0%
+2025-07-22 21:52:53 - __main__ - ERROR - 最終レポート保存エラー: 'HamsterTrackingConfig' object has no attribute 'lighting'
+2025-07-22 21:52:53 - __main__ - INFO - ✅ 統合撮影システム停止完了
+2025-07-22 21:52:53 - __main__ - INFO - === 自動撮影システム終了 ===
+2025-07-22 21:53:35 - __main__ - INFO - === 自動撮影システム起動 ===
+2025-07-22 21:53:35 - __main__ - INFO - 実行時刻: 2025-07-22 21:53:35
+2025-07-22 21:53:35 - __main__ - INFO - 引数: {'config': None, 'duration': 60, 'test': True, 'manual_trigger': False, 'verbose': True, 'log_file': 'auto_capture.log'}
+2025-07-22 21:53:35 - phase3_hamster_tracking.utils.hamster_config - INFO - 設定ファイル '/home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/hamster_config.yaml' を正常に読み込みました
+2025-07-22 21:53:35 - __main__ - INFO - 設定ファイル読み込み完了: ./data
+2025-07-22 21:53:35 - __main__ - INFO - 統合撮影システム初期化完了 (テストモード)
+2025-07-22 21:53:35 - __main__ - INFO - システムコンポーネントを初期化中...
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: base -> data
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: raw_frames -> data/raw_frames
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: processed -> data/processed
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: reports -> data/reports
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ストレージパス設定: backup -> data/backup
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム初期化完了
+2025-07-22 21:53:35 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 座標校正システム初期化完了 - ケージサイズ: 380.0x280.0mm
+2025-07-22 21:53:35 - phase3_hamster_tracking.hamster_tracking.coordinate_calibrator - INFO - 校正データを読み込みました: /home/mushipi/Scripts/hamcam_reolink/phase3_hamster_tracking/config/calibration_matrix.yaml (誤差: 0.00mm)
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.motion_detector - INFO - 動作検出システム初期化完了
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.data_quality - INFO - データ品質評価システム初期化完了
+2025-07-22 21:53:35 - __main__ - INFO - ✅ システムコンポーネント初期化完了
+2025-07-22 21:53:35 - __main__ - INFO - === 統合自動撮影システム開始 ===
+2025-07-22 21:53:35 - __main__ - INFO - 設定情報:
+2025-07-22 21:53:35 - __main__ - INFO -   ケージサイズ: 380.0×280.0mm
+2025-07-22 21:53:35 - __main__ - INFO -   撮影間隔: 60分
+2025-07-22 21:53:35 - __main__ - INFO -   動作検出: 有効
+2025-07-22 21:53:35 - __main__ - INFO -   品質評価: 有効
+2025-07-22 21:53:35 - __main__ - INFO -   データ保存: ./data
+2025-07-22 21:53:35 - __main__ - INFO -   実行時間: 60秒
+2025-07-22 21:53:35 - __main__ - INFO -   テストモード: 有効
+2025-07-22 21:53:35 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム開始
+2025-07-22 21:53:35 - RTSPStream-sub - INFO - RTSP接続開始: rtsp://admin:894890abc@192.168.31.85:554/h264Preview_01_sub
+2025-07-22 21:53:37 - RTSPStream-sub - INFO - RTSP接続成功 - 解像度: (480, 640)
+2025-07-22 21:53:37 - RTSPStream-sub - INFO - ストリーミング開始
+2025-07-22 21:53:37 - phase3_hamster_tracking.utils.lighting_detector - INFO - LightingModeDetector 初期化完了 (閾値: 0.95)
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド開始
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド開始
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 定期撮影時刻に到達
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム開始成功
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - DEBUG - 撮影リクエスト追加: scheduled
+2025-07-22 21:53:37 - __main__ - INFO - 実行制限時間: 60秒 (終了予定: 21:54:37)
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影実行: scheduled @ 2025-07-22 21:53:37.484397
+2025-07-22 21:53:37 - RTSPStream-sub - INFO - RTSP接続開始: rtsp://admin:894890abc@192.168.31.85:554/h264Preview_01_sub
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - WARNING - 照明検出エラー: 'LightingModeDetector' object has no attribute 'detect_lighting_mode'
+2025-07-22 21:53:37 - __main__ - INFO - 撮影完了: hamster_scheduled_20250722_215337_484.jpg (品質: poor, スコア: 0.38)
+2025-07-22 21:53:37 - __main__ - WARNING - 低品質画像: hamster_scheduled_20250722_215337_484.jpg - ['ノイズが多く含まれています', 'ハムスターの可視性が低いです', '影の干渉が検出されました']
+2025-07-22 21:53:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 撮影成功: hamster_scheduled_20250722_215337_484.jpg (品質: 0.81)
+2025-07-22 21:53:41 - RTSPStream-sub - INFO - RTSP接続成功 - 解像度: (480, 640)
+2025-07-22 21:53:41 - RTSPStream-sub - INFO - ストリーミング開始
+2025-07-22 21:53:41 - __main__ - INFO - ✅ 動作検出用RTSPストリーム開始
+2025-07-22 21:54:05 - phase3_hamster_tracking.data_collection.motion_detector - INFO - 活動状態変化: unknown -> rest
+2025-07-22 21:54:05 - __main__ - INFO - ハムスター活動状態変化: rest
+2025-07-22 21:54:37 - __main__ - INFO - 実行時間制限に到達
+2025-07-22 21:54:37 - RTSPStream-sub - INFO - ストリーミング停止
+2025-07-22 21:54:37 - __main__ - INFO - 統合撮影システム停止中...
+2025-07-22 21:54:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 自動撮影システム停止中...
+2025-07-22 21:54:37 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 動作監視スレッド終了
+2025-07-22 21:54:38 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - 撮影ワーカースレッド終了
+2025-07-22 21:54:38 - RTSPStream-sub - INFO - ストリーミング停止
+2025-07-22 21:54:38 - phase3_hamster_tracking.data_collection.auto_capture_system - ERROR - セッションレポート保存エラー: Object of type datetime is not JSON serializable
+2025-07-22 21:54:38 - phase3_hamster_tracking.data_collection.auto_capture_system - INFO - ✅ 自動撮影システム停止完了
+2025-07-22 21:54:38 - __main__ - INFO - === 最終セッション統計 ===
+2025-07-22 21:54:38 - __main__ - INFO - 稼働時間: 1分3秒
+2025-07-22 21:54:38 - __main__ - INFO - 総撮影数: 1
+2025-07-22 21:54:38 - __main__ - INFO - 成功撮影: 1
+2025-07-22 21:54:38 - __main__ - INFO - 高品質画像: 0
+2025-07-22 21:54:38 - __main__ - INFO - 動作検出: 0回
+2025-07-22 21:54:38 - __main__ - INFO - 総データサイズ: 0.09MB
+2025-07-22 21:54:38 - __main__ - INFO - 撮影効率: 56.6枚/時間
+2025-07-22 21:54:38 - __main__ - INFO - 高品質率: 0.0%
+2025-07-22 21:54:38 - __main__ - INFO - 最終レポートを保存: data/reports/session_report_20250722_215438.json
+2025-07-22 21:54:38 - __main__ - INFO - ✅ 統合撮影システム停止完了
+2025-07-22 21:54:38 - __main__ - INFO - === 自動撮影システム終了 ===

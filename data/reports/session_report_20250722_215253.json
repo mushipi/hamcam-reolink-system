@@ -1,0 +1,11 @@
+{
+  "session_end_time": "2025-07-22T21:52:53.671614",
+  "statistics": {
+    "total_captures": 1,
+    "successful_captures": 1,
+    "failed_captures": 0,
+    "motion_triggers": 0,
+    "scheduled_triggers": 1,
+    "manual_triggers": 0,
+    "average_quality": 0.8140021645653117,
+    "last_capture_time": 

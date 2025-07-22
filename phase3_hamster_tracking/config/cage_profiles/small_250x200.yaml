@@ -1,0 +1,66 @@
+# 小型ケージプロファイル (250×200mm)
+# 小型ハムスター・一時隔離用ケージ設定
+
+profile_info:
+  name: "Small Hamster Cage 250x200" 
+  description: "Compact cage profile for small hamsters or temporary housing"
+  version: "1.0"
+  created_by: "System Default"
+  suitable_for: ["dwarf_hamster", "temporary_housing", "quarantine"]
+  
+cage:
+  dimensions:
+    width: 250.0
+    height: 200.0  
+    depth: 150.0
+    
+  specifications:
+    material: "acrylic"
+    corner_markers: true
+    grid_pattern: false
+    reference_object_size: 30.0       # 小さな基準物体
+    background_color: "white"
+    
+  environment:
+    camera_height_mm: 300.0           # 低めの設置
+    lighting_type: "mixed"
+    viewing_angle_degrees: 90.0
+
+coordinate_calibration:
+  method: "manual"
+  calibration_points: 4
+  validation:
+    enabled: true
+    reference_distance_mm: 50.0       # 小さな基準距離
+    accuracy_threshold_mm: 3.0        # 厳しい精度要求
+
+movement_tracking:
+  constraints:
+    max_speed_mm_per_sec: 120.0       # 小型ケージ内速度
+    max_acceleration_mm_per_sec2: 300.0
+    min_movement_threshold_mm: 1.5    # 細かい動き検出
+    max_jump_distance_mm: 25.0
+    
+  filtering:
+    kalman_filter_enabled: true
+    smoothing_window_size: 3          # 小さなウィンドウ
+    outlier_detection_enabled: true
+    outlier_threshold_sigma: 2.0      # 厳しい異常値検出
+    
+  statistics:
+    activity_threshold_mm_per_min: 50.0   # 小型ケージ用
+    rest_threshold_sec: 200
+
+optimization:
+  deeplabcut:
+    confidence_threshold: 0.8         # 高い信頼度要求
+    body_part_weights:
+      nose: 0.3       # 小型ケージでは鼻の動きが重要
+      back: 0.4       # 背中中心
+      tail: 0.1       # 尻尾は軽視
+      
+  lighting:
+    rgb_correlation_threshold: 0.85
+    
+  performance:
+    target_fps: 3.0                   # 小型ケージは高FPS可能

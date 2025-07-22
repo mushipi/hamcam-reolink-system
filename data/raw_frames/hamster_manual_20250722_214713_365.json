@@ -1,0 +1,12 @@
+{
+  "trigger_type": "manual",
+  "timestamp": "2025-07-22T21:47:13.365846",
+  "quality_score": 0.8176100996222813,
+  "frame_size": [
+    480,
+    640,
+    3
+  ],
+  "lighting_mode": null,
+  "test": true
+}

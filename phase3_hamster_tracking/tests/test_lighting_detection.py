@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 照明モード検出機能のテスト
 RGB相関解析とRTSPストリーム連携の検証
@@ -6,6 +7,9 @@ RGB相関解析とRTSPストリーム連携の検証
 
 import sys
 import os
+# UTF-8エンコーディング強制設定
+if sys.stdout.encoding != 'UTF-8':
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 import cv2

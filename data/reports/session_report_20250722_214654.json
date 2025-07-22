@@ -1,0 +1,19 @@
+{
+  "session_end_time": "2025-07-22T21:46:54.458378",
+  "statistics": {
+    "total_captures": 0,
+    "successful_captures": 0,
+    "failed_captures": 0,
+    "motion_triggers": 0,
+    "scheduled_triggers": 0,
+    "manual_triggers": 0,
+    "average_quality": 0.0,
+    "last_capture_time": null
+  },
+  "capture_history_count": 0,
+  "configuration": {
+    "capture_interval_minutes": 60,
+    "motion_detection_enabled": true,
+    "quality_threshold": 0.8
+  }
+}

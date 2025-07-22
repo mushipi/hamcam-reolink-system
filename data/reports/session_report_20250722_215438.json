@@ -1,0 +1,56 @@
+{
+  "session_summary": {
+    "session_start": "2025-07-22T21:53:35.029579",
+    "total_captures": 1,
+    "successful_captures": 1,
+    "high_quality_captures": 0,
+    "motion_detections": 0,
+    "session_duration": 0,
+    "average_capture_interval": 0,
+    "data_size_mb": 0.08807182312011719
+  },
+  "system_configuration": {
+    "cage_size_mm": [
+      380.0,
+      280.0
+    ],
+    "capture_interval_minutes": 60,
+    "motion_detection_enabled": true,
+    "quality_assessment_enabled": true,
+    "test_mode": true
+  },
+  "component_stats": {
+    "capture_system": {
+      "total_captures": 1,
+      "successful_captures": 1,
+      "failed_captures": 0,
+      "motion_triggers": 0,
+      "scheduled_triggers": 1,
+      "manual_triggers": 0,
+      "average_quality": 0.8142330544269663,
+      "last_capture_time": "2025-07-22 21:53:37.492700"
+    },
+    "motion_detector": {
+      "total_detections": 0,
+      "valid_detections": 0,
+      "false_positives": 0,
+      "average_velocity_mm_s": 0.0,
+      "max_velocity_mm_s": 0.0,
+      "active_periods": 0,
+      "rest_periods": 1,
+      "session_start": "2025-07-22 21:53:35.032610"
+    },
+    "quality_assessor": {
+      "total_evaluated": 1,
+      "excellent_count": 0,
+      "good_count": 0,
+      "acceptable_count": 0,
+      "poor_count": 1,
+      "rejected_count": 0,
+      "average_overall_score": 0.3833031344891893,
+      "average_blur_score": 0.986540707707766,
+      "average_brightness_score": 0.5260103911356209,
+      "average_contrast_score": 0.7819732806232175
+    }
+  }
+}

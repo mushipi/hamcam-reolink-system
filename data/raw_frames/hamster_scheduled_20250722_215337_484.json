@@ -1,0 +1,11 @@
+{
+  "trigger_type": "scheduled",
+  "timestamp": "2025-07-22T21:53:37.484397",
+  "quality_score": 0.8142330544269663,
+  "frame_size": [
+    480,
+    640,
+    3
+  ],
+  "lighting_mode": null
+}

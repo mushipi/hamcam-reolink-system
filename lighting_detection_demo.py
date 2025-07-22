@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 照明モード検出デモアプリケーション
 リアルタイムでの照明モード表示と統計情報
 """
 
-import sys
 import os
+import sys
+# UTF-8エンコーディング強制設定
+if sys.stdout.encoding != 'UTF-8':
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import cv2
@@ -13,11 +17,58 @@ import numpy as np
 import time
 from datetime import datetime
 import argparse
+from PIL import Image, ImageDraw, ImageFont
 
 # 必要なモジュールのインポート
 from phase3_hamster_tracking.utils.lighting_detector import LightingModeDetector, SimpleLightingDetector
 from rtsp_stream import RTSPStream
 from utils.camera_config import get_camera_config
+
+def put_japanese_text(image, text, position, font_size=20, color=(255, 255, 255)):
+    """
+    OpenCV画像に日本語テキストを描画
+    
+    Args:
+        image: OpenCV画像 (BGR)
+        text: 描画する日本語テキスト
+        position: 描画位置 (x, y)
+        font_size: フォントサイズ
+        color: 文字色 (B, G, R)
+    
+    Returns:
+        描画後の画像
+    """
+    try:
+        # OpenCV BGR -> PIL RGB
+        pil_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        draw = ImageDraw.Draw(pil_image)
+        
+        # 日本語フォント使用
+        try:
+            font = ImageFont.truetype("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", font_size)
+        except:
+            try:
+                # フォールバック1: 別のCJKフォント
+                font = ImageFont.truetype("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", font_size)
+            except:
+                # フォールバック2: デフォルト
+                font = ImageFont.load_default()
+        
+        # PIL色形式に変換 (RGB)
+        pil_color = (color[2], color[1], color[0])
+        
+        # テキスト描画
+        draw.text(position, text, font=font, fill=pil_color)
+        
+        # PIL RGB -> OpenCV BGR
+        return cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
+    
+    except Exception as e:
+        # エラー時は英語でフォールバック
+        fallback_text = text.encode('ascii', 'replace').decode('ascii')
+        cv2.putText(image, fallback_text, position, cv2.FONT_HERSHEY_SIMPLEX, 
+                   font_size/30, color, 1)
+        return image
 
 class LightingDetectionDemo:
     """照明検出デモクラス"""
@@ -96,7 +147,7 @@ class LightingDetectionDemo:
                 
                 # OpenCVウィンドウ設定
                 window_name = "照明モード検出デモ"
-                cv2.namedWindow(window_name, cv2.WINDOW_RESIZABLE)
+                cv2.namedWindow(window_name, cv2.WINDOW_AUTOSIZE)
                 
                 start_time = time.time()
                 show_info = True
@@ -194,10 +245,10 @@ class LightingDetectionDemo:
                      (w//2 + text_w//2 + 10, 10 + text_h + baseline + 20),
                      self.colors['background'], -1)
         
-        # モードテキスト
-        cv2.putText(display_frame, mode_text,
-                   (w//2 - text_w//2, 10 + text_h + 10),
-                   self.font, self.font_scale * 1.5, mode_color, self.thickness)
+        # モードテキスト（日本語対応）
+        display_frame = put_japanese_text(display_frame, mode_text,
+                                        (w//2 - text_w//2, 10 + text_h + 10),
+                                        font_size=int(self.font_scale * 30), color=mode_color)
         
         # 信頼度バー
         bar_width = 200
@@ -218,11 +269,11 @@ class LightingDetectionDemo:
                      (bar_x + filled_width, bar_y + bar_height),
                      mode_color, -1)
         
-        # 信頼度テキスト
+        # 信頼度テキスト（日本語対応）
         conf_text = f"信頼度: {confidence:.3f}"
-        cv2.putText(display_frame, conf_text,
-                   (bar_x, bar_y + bar_height + 20),
-                   self.font, self.font_scale, self.colors['text'], 1)
+        display_frame = put_japanese_text(display_frame, conf_text,
+                                        (bar_x, bar_y + bar_height + 20),
+                                        font_size=int(self.font_scale * 20), color=self.colors['text'])
         
         if show_info and details:
             self._draw_detailed_info(display_frame, details)

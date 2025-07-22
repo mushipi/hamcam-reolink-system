@@ -1,0 +1,78 @@
+calibration_info:
+  status: calibrated
+  created_at: '2025-07-21T21:50:35.795420Z'
+  last_updated: '2025-07-21T21:50:35.795443Z'
+  cage_size_mm:
+  - 380.0
+  - 280.0
+  method: manual_4point
+  validation_error_mm: 3.482421125013298e-14
+  operator: CoordinateCalibrator
+  notes: Auto-generated calibration data with manual_4point method
+transformation_matrix:
+  homography:
+  - - 0.8681163313695222
+    - 0.014001876312411654
+    - -87.9317832419451
+  - - -0.010555478834424939
+    - 0.9288821374293941
+    - -73.25502311090902
+  - - -1.6568565192865448e-06
+    - 7.372080934704497e-05
+    - 1.0
+  inverse_homography:
+  - - 1.151802060664168
+    - -0.025253424733933546
+    - 99.4300689234334
+  - - 0.013162634712578945
+    - 1.07005141582754
+    - 79.54405513874674
+  - - 9.380106689882743e-07
+    - -7.892689771916234e-05
+    - 0.9943006892343345
+  statistics:
+    pixel_to_mm_ratio_x: 0.59375
+    pixel_to_mm_ratio_y: 0.5833333333333334
+    rmse_error_mm: 3.482421125013298e-14
+    max_error_mm: 5.526323824012365e-14
+    mean_error_mm: 2.4413207322685967e-14
+calibration_points:
+  pixel_coordinates:
+  - - 100.0
+    - 80.0
+  - - 540.0
+    - 85.0
+  - - 545.0
+    - 395.0
+  - - 95.0
+    - 390.0
+  world_coordinates_mm:
+  - - 0.0
+    - 0.0
+  - - 380.0
+    - 0.0
+  - - 380.0
+    - 280.0
+  - - 0.0
+    - 280.0
+  point_quality:
+    detection_confidence:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    manual_adjustment:
+    - true
+    - true
+    - true
+    - true
+accuracy_metrics:
+  rmse_error_mm: 3.482421125013298e-14
+  max_error_mm: 5.526323824012365e-14
+  mean_error_mm: 2.4413207322685967e-14
+  accuracy_threshold_mm: 5.0
+  meets_accuracy_requirement: true
+quality_control:
+  calibration_id: cal_20250721_215035
+  validation_passed: true
+  approval_status: approved

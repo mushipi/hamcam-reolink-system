@@ -1,0 +1,11 @@
+{
+  "trigger_type": "motion",
+  "timestamp": "2025-07-22T21:47:15.352554",
+  "quality_score": 0.8172827131686476,
+  "frame_size": [
+    480,
+    640,
+    3
+  ],
+  "lighting_mode": null
+}

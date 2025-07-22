@@ -1,0 +1,217 @@
+# ハムスター管理システム設定ファイル
+# Version: 3.0
+# 作成日: 2025-07-21
+
+system:
+  version: "3.0"
+  name: "hamster_tracking_system"
+  description: "RLC-510A Camera based hamster activity monitoring system"
+  
+# ケージ物理仕様
+cage:
+  # ケージサイズ (mm単位)
+  dimensions:
+    width: 380.0      # ケージ幅
+    height: 280.0     # ケージ奥行き  
+    depth: 200.0      # ケージ高さ
+  
+  # ケージ材質・特徴
+  specifications:
+    material: "acrylic"           # アクリル製
+    corner_markers: true          # 四隅マーカー有無
+    grid_pattern: false          # グリッドパターン有無
+    reference_object_size: 50.0   # 校正用基準物体サイズ(mm)
+    background_color: "white"     # 背景色
+    
+  # 設置環境
+  environment:
+    camera_height_mm: 400.0       # カメラ高さ
+    lighting_type: "mixed"        # "daylight" | "ir" | "mixed"
+    viewing_angle_degrees: 90.0   # 撮影角度
+
+# 座標校正設定
+coordinate_calibration:
+  # 校正方法
+  method: "manual"              # "manual" | "auto" | "hybrid"
+  calibration_points: 4         # 校正点数 (4点推奨)
+  
+  # 校正ファイル
+  calibration_matrix_file: "calibration_matrix.yaml"
+  backup_calibration_file: "calibration_backup.yaml"
+  
+  # 校正精度設定
+  validation:
+    enabled: true
+    reference_distance_mm: 100.0  # 検証用既知距離
+    accuracy_threshold_mm: 5.0    # 許容誤差
+    auto_validation: true         # 自動検証有効
+    
+  # 自動校正設定（将来拡張用）
+  auto_detection:
+    corner_detection_method: "contour"  # "contour" | "hough" | "template"
+    edge_threshold: 50
+    min_area_ratio: 0.7
+    gaussian_blur_kernel: 5
+
+# DeepLabCut関連設定
+deeplabcut:
+  # 基本設定
+  model:
+    config_file: "deeplabcut/config.yaml"
+    model_path: "deeplabcut/models/latest"
+    confidence_threshold: 0.7
+    inference_engine: "tensorflow"    # "tensorflow" | "tensorrt" | "onnx"
+  
+  # 身体部位設定（段階的拡張）
+  body_parts:
+    phase1: ["nose", "back", "tail"]                           # MVP版
+    phase2: ["nose", "head", "back", "hip", "tail"]            # 拡張版  
+    phase3: ["nose", "head", "left_ear", "right_ear", "back", "hip", "tail"]  # 完全版
+    current_phase: "phase1"
+  
+  # 身体部位重み（移動計算用）
+  body_part_weights:
+    nose: 0.2
+    head: 0.25
+    left_ear: 0.05
+    right_ear: 0.05
+    back: 0.3
+    hip: 0.25
+    tail: 0.1
+    
+  # 推論設定
+  inference:
+    batch_size: 1
+    input_resolution: [480, 640]     # [height, width]
+    preprocessing_enabled: true
+    postprocessing_enabled: true
+
+# 移動計算・追跡設定
+movement_tracking:
+  # 物理的制約
+  constraints:
+    max_speed_mm_per_sec: 200.0      # 最大移動速度
+    max_acceleration_mm_per_sec2: 500.0  # 最大加速度
+    min_movement_threshold_mm: 2.0    # 最小検出移動量
+    max_jump_distance_mm: 50.0       # 最大瞬間移動距離
+  
+  # フィルタリング設定
+  filtering:
+    kalman_filter_enabled: true       # カルマンフィルタ使用
+    smoothing_window_size: 5          # 平滑化ウィンドウサイズ
+    outlier_detection_enabled: true   # 異常値検出有効
+    outlier_threshold_sigma: 2.5      # 異常値検出閾値(標準偏差倍数)
+    interpolation_max_frames: 3       # 最大補間フレーム数
+  
+  # 統計計算設定
+  statistics:
+    sampling_interval_sec: 1.0        # サンプリング間隔
+    daily_summary_time: "23:59"       # 日次サマリー時刻
+    activity_threshold_mm_per_min: 100.0  # 活動判定閾値
+    rest_threshold_sec: 300           # 休息判定時間(秒)
+
+# データ収集・保存設定
+data_collection:
+  # ファイル保存設定
+  storage:
+    base_directory: "./data"
+    raw_data_dir: "raw_frames"
+    processed_data_dir: "processed"
+    calibration_data_dir: "calibration"
+    reports_dir: "reports"
+    backup_dir: "backup"
+    
+  # データ品質管理
+  quality:
+    min_confidence_ratio: 0.8         # 最小信頼度比率
+    max_missing_frames_ratio: 0.1     # 最大欠損フレーム比率
+    auto_quality_check: true          # 自動品質チェック
+    frame_skip_on_error: true         # エラー時フレームスキップ
+    
+  # データローテーション
+  rotation:
+    max_raw_data_days: 7              # 生データ保持日数
+    max_processed_data_days: 30       # 処理済みデータ保持日数  
+    max_report_data_days: 90          # レポートデータ保持日数
+
+# システム監視設定
+monitoring:
+  # 性能監視
+  performance:
+    target_fps: 2.0                   # 目標FPS
+    max_processing_time_ms: 500       # 最大処理時間
+    memory_limit_mb: 512              # メモリ使用制限
+    cpu_limit_percent: 80             # CPU使用制限
+    
+  # アラート設定
+  alerts:
+    no_movement_hours: 4              # 無動作アラート時間
+    system_error_threshold: 10        # システムエラー閾値
+    low_confidence_ratio_threshold: 0.5  # 低信頼度アラート閾値
+    high_memory_usage_threshold: 0.9  # 高メモリ使用アラート
+    
+  # ログ設定
+  logging:
+    level: "INFO"                     # ログレベル: DEBUG, INFO, WARNING, ERROR
+    file_rotation_size_mb: 10         # ログファイルローテーションサイズ
+    max_log_files: 5                  # 最大ログファイル数
+    console_output: true              # コンソール出力有効
+
+# 照明・撮影設定
+lighting:
+  # 照明モード検出
+  detection:
+    rgb_correlation_threshold: 0.9    # RGB相関閾値
+    auto_detection_enabled: true      # 自動検出有効
+    detection_interval_sec: 30        # 検出間隔
+    
+  # スケジュール撮影
+  scheduled_capture:
+    enabled: true
+    interval_minutes: 60              # 定期撮影間隔
+    priority_hours: [6, 12, 18, 0]    # 優先撮影時刻
+    motion_triggered: true            # 動作検出時撮影
+    
+  # 品質評価
+  quality_assessment:
+    enabled: true
+    blur_threshold: 100.0             # ブラー検出閾値
+    brightness_range: [50, 200]       # 適正輝度範囲
+    contrast_threshold: 0.3           # コントラスト閾値
+
+# 通信・ネットワーク設定
+network:
+  # RTSP設定
+  rtsp:
+    stream_type: "sub"                # "main" | "sub"
+    reconnect_attempts: 5             # 再接続試行回数
+    timeout_sec: 10                   # タイムアウト時間
+    buffer_size: 1                    # バッファサイズ
+    
+  # API設定
+  api:
+    enabled: false                    # REST API有効
+    port: 8080                       # APIポート
+    auth_required: true              # 認証必要
+    
+  # 通知設定
+  notifications:
+    enabled: false                   # 通知有効
+    webhook_url: null                # Webhook URL
+    email_enabled: false             # メール通知
+
+# 開発・デバッグ設定
+development:
+  debug_mode: false                  # デバッグモード
+  verbose_logging: false             # 詳細ログ
+  save_debug_frames: false           # デバッグフレーム保存
+  profiling_enabled: false           # プロファイリング有効
+  test_mode: false                   # テストモード
+  
+# メタデータ
+metadata:
+  config_created: "2025-07-21T10:30:00Z"
+  config_version: "1.0"
+  last_modified: "2025-07-21T10:30:00Z"
+  created_by: "Claude Code Assistant"
+  description: "Initial configuration for hamster tracking system"
