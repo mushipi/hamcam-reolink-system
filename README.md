@@ -35,7 +35,7 @@ A comprehensive camera monitoring system for RLC-510A with advanced hamster beha
 
 ### 1. Installation
 ```bash
-git clone https://github.com/yourusername/hamcam-reolink-system.git
+git clone https://github.com/mushipi/hamcam-reolink-system.git
 cd hamcam-reolink-system
 pip install -r requirements.txt
 ```
