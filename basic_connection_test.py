@@ -10,12 +10,17 @@ import traceback
 def test_camera_connection():
     """カメラへの基本接続をテストする"""
     
-    # カメラ設定
-    camera_ip = "192.168.31.85"
-    username = "admin"
+    # カメラ設定を読み込み
+    from utils.camera_config import get_camera_config
+    config = get_camera_config()
     
-    # パスワード入力（実際の運用では環境変数から取得推奨）
-    password = input(f"カメラ {camera_ip} のパスワードを入力してください: ")
+    # パスワードが設定されていない場合のみ設定
+    if not config.password:
+        config.set_password("894890abc")
+    
+    camera_ip = config.ip
+    username = config.username
+    password = config.password
     
     try:
         print(f"カメラ {camera_ip} への接続を試行中...")
@@ -33,12 +38,22 @@ def test_camera_connection():
             # 基本情報取得テスト
             print("\n基本情報を取得中...")
             try:
-                device_info = camera.get_device_info()
-                print(f"デバイス名: {device_info.get('name', 'N/A')}")
-                print(f"モデル: {device_info.get('model', 'N/A')}")
-                print(f"ファームウェア: {device_info.get('firmVer', 'N/A')}")
-                print(f"ハードウェア: {device_info.get('hardVer', 'N/A')}")
-                print(f"UID: {device_info.get('uid', 'N/A')}")
+                device_info = camera.get_information()
+                if isinstance(device_info, list) and len(device_info) > 0:
+                    info = device_info[0].get('value', {})
+                    info = info.get('DevInfo', info)
+                elif isinstance(device_info, dict):
+                    info = device_info.get('value', device_info)
+                    info = info.get('DevInfo', info) if isinstance(info, dict) else {}
+                else:
+                    info = {}
+                
+                print(f"デバイス名: {info.get('name', 'N/A')}")
+                print(f"モデル: {info.get('model', 'N/A')}")
+                print(f"ファームウェア: {info.get('firmVer', 'N/A')}")
+                print(f"ハードウェア: {info.get('hardVer', 'N/A')}")
+                print(f"UID: {info.get('uid', 'N/A')}")
+                print(f"シリアル: {info.get('serial', 'N/A')}")
             except Exception as e:
                 print(f"⚠️  デバイス情報取得エラー: {e}")
             
@@ -60,7 +75,9 @@ def test_network_connectivity():
     """ネットワーク接続状況を確認"""
     import subprocess
     
-    camera_ip = "192.168.31.85"
+    from utils.camera_config import get_camera_config
+    config = get_camera_config()
+    camera_ip = config.ip
     
     print("=== ネットワーク接続確認 ===")
     

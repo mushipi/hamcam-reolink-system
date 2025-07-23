@@ -3,6 +3,7 @@ numpy>=1.21.0
 opencv-python>=4.5.0
 PyYAML>=6.0
 requests>=2.25.0
+reolinkapi>=1.0.0
 
 # GUI Dependencies
 tkinter  # Usually included with Python

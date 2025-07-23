@@ -254,6 +254,11 @@ if __name__ == "__main__":
     # ログ設定
     logging.basicConfig(level=logging.INFO)
     
+    # パスワードを事前設定
+    config = get_camera_config()
+    if not config.password:
+        config.set_password("894890abc")
+    
     # RTSPストリームテスト
     print("=== RTSPストリーム基本テスト ===")
     
