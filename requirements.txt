@@ -22,3 +22,4 @@ flake8>=3.8.0      # For code linting
 # - Anaconda distribution is recommended
 # - OpenCV requires system-level dependencies
 # - For headless systems, install opencv-python-headless instead
+python-dotenv>=1.0.0
